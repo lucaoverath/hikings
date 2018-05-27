@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hikings</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="/Home.html" class="firstNav active">Home</a></li>
+					<li><a href="/Tips&Tricks.html" class="secondNav">Tips &amp; Tricks</a></li>
+					<li><a href="/Essentials.html" class="thirdNav">Essentials</a></li>
+					<li><a href="/RecommendedPlaces.html" class="fourthNav">Recommended hiking places</a></li>
+					<li><a href="/Reviews.html" class="fifthNav">Reviews</a></li>
+					<li><a href="/WhereToSleep.html" class="sixthNav">Where to sleep?</a></li>
+					<li><a href="/Contact.html" class="seventhNav">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="slider">
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 5</div>
+						<img src="images/home/image-1.jpg" style="width:100%">
+						<div class="text">Adventure</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 5</div>
+						<img src="/images/home/image-2.jpg" style="width:100%">
+						<div class="text">Wild</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 5</div>
+						<img src="/images/home/image-3.jpg" style="width:100%">
+						<div class="text">Free</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">4 / 5</div>
+						<img src="/images/home/image-4.jpg" style="width:100%">
+						<div class="text">Breath taking</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">5 / 5</div>
+						<img src="/images/home/image-5.jpg" style="width:100%">
+						<div class="text">Awesome</div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+				<br>
+
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+				</div>
+
+				<script>
+					var slideIndex = 1;
+					showSlides(slideIndex);
+
+					function plusSlides(n) {
+						showSlides(slideIndex += n);
+					}
+
+					function currentSlide(n) {
+						showSlides(slideIndex = n);
+					}
+
+					function showSlides(n) {
+						var i;
+						var slides = document.getElementsByClassName("mySlides");
+						var dots = document.getElementsByClassName("dot");
+						if (n > slides.length) {
+							slideIndex = 1
+						}
+						if (n < 1) {
+							slideIndex = slides.length
+						}
+						for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";
+						}
+						for (i = 0; i < dots.length; i++) {
+							dots[i].className = dots[i].className.replace(" active", "");
+						}
+						slides[slideIndex - 1].style.display = "block";
+						dots[slideIndex - 1].className += " active";
+					}
+					
+					setInterval("plusSlides(1)", 5000);
+				</script>
+
+			</section>
+
+			<section class="Headlines">
+				<div class="mainOne textblock">
+					<div>
+						<a href="/RecommendedPlaces.html"><h3>Inca Trail</h3></a>
+						<p>One of the most popular hikes in the world, the Inca Trail takes you through 26 miles of grueling inclines and declines. You get a chance to explore ruins, jungle and beautiful mountain scenery, and of course, end the hike at Machu Picchu.</p>
+						
+						<p class="linkToPage">Click <a href="/RecommendedPlaces.html">here</a> to go to the recommended places.</p>
+					</div>
+					<img src="/images/incatrail/inca-trail-2.jpg" alt="picutre">
+				</div>
+
+				<div class="mainTwo textblock">
+					<img src="/images/reviews/review-1.jpg" alt="picutre">
+					<div>
+						<a href="/Reviews.html"><h3>Walk on the Wildside</h3></a>
+						<p>This is one of my favorite hiking places in the area. It's a bit off the beaten path which is a good thing. The hike isn't that long but it is steep and there really isn't a great trail so be careful. Going behind the falls is awesome. If you go the other direction make sure you climb down the embankment to the creek bed. There is another spectacular waterfall that most don't know about. I am going to kije the creek all the way the Skaneateles lake this year, I can't wait! A MUST SEE!</p>
+						
+						<p class="linkToPage">Click <a href="/Reviews.html">here</a> to go to the reviews.</p>
+					</div>
+				</div>
+
+				<div class="mainThree textblock">
+					<div>
+						<p>Did you discover a new, exciting place to go hiking? A cozy, quite campingsite? Or do you have complaint about wrong info on this website? Or just a question about hiking?<br><br>Do not hold back and let us know! we will respond with your recommendation / complaint / question in less than 3 days. We thank you in advance! </p>
+						<p class="linkToPage">Click <a href="/Contact.html">here</a> to go to the contact.</p>
+					</div>
+					<img src="/images/campings/suggestionBox.jpg" alt="picutre">
+				</div>
+
+			</section>
+
+		</main>
+		<footer>
+			<p>Luca Overath &copy;</p>
+		</footer>
+	</div>
+
+</body>
+</html>
